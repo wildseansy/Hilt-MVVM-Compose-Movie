@@ -9,12 +9,12 @@ plugins {
 }
 
 android {
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.piashcse.hilt_mvvm_compose_movie"
         minSdk = 23
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 40
         versionName = "2.2.0"
 
@@ -106,6 +106,7 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
     ksp(libs.hilt.compiler)
+    ksp(libs.kotlin.metadata.jvm)
 
     // Logger
     implementation(libs.timber)
