@@ -7,7 +7,7 @@ data class ArtistMovie(
 @SerializedName("adult")
 val adult: Boolean,
 @SerializedName("backdrop_path")
-val backdropPath: String,
+val backdropPath: String? = null,
 @SerializedName("character")
 val character: String,
 @SerializedName("credit_id")

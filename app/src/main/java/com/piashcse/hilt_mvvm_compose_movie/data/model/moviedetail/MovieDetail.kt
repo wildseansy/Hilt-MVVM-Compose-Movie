@@ -9,7 +9,7 @@ data class MovieDetail(
     @SerializedName("adult")
     val adult: Boolean,
     @SerializedName("backdrop_path")
-    val backdropPath: String,
+    val backdropPath: String? = null,
     @SerializedName("budget")
     val budget: Int,
     @SerializedName("genres")

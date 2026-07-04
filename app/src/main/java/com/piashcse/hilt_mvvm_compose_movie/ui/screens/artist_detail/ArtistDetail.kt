@@ -78,7 +78,7 @@ fun ArtistDetailUi(
                             .height(250.dp)
                             .width(190.dp)
                             .cornerRadius(10),
-                        imageModel = { ApiURL.IMAGE_URL.plus(it.profilePath) },
+                        imageModel = { it.profilePath?.let { path -> ApiURL.IMAGE_URL.plus(path) } },
                         imageOptions = ImageOptions(
                             contentScale = ContentScale.Crop,
                             alignment = Alignment.Center,
