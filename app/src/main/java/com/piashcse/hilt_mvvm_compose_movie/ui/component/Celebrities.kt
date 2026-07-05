@@ -94,7 +94,7 @@ fun DisplayCelebrities(
                             .size(230.dp)
                             .cornerRadius(10)
                             .clickable { navController.navigate(ArtistDetailRoute(item.id)) },
-                        imageModel = { ApiURL.IMAGE_URL + item.profilePath },
+                        imageModel = { item.profilePath?.let { ApiURL.IMAGE_URL + it } },
                         imageOptions = ImageOptions(
                             contentScale = ContentScale.Crop,
                             alignment = Alignment.Center,

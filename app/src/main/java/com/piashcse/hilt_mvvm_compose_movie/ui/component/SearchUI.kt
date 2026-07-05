@@ -97,7 +97,7 @@ fun SearchUI(
                             .cornerRadius(8),
                         imageModel = {
                             val imagePath = if (activeTab == CELEBRITIES_SEARCH) {
-                                item.profilePath
+                                item.profilePath.orEmpty()
                             } else {
                                 item.backdropPath
                             }

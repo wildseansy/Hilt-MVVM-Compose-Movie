@@ -356,7 +356,7 @@ fun ArtistAndCrew(cast: List<Cast>, onCastClick: (Int) -> Unit) {
                             .clickable {
                                 onCastClick(item.id)
                             },
-                        imageModel = { ApiURL.IMAGE_URL.plus(item.profilePath) },
+                        imageModel = { item.profilePath?.let { ApiURL.IMAGE_URL.plus(it) } },
                         imageOptions = ImageOptions(
                             contentScale = ContentScale.Crop, alignment = Alignment.Center
                         ),
